@@ -105,6 +105,6 @@ function showNumber() {
   puzzleInput.forEach(element => console.log(element));
 }
 
-const button = document.querySelector("#button");
+const ShowSolution = document.querySelector("#button");
 
-button.addEventListener("click", showNumber());
+ShowSolution.addEventListener("click", console.log("success"));
