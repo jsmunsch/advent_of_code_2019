@@ -101,12 +101,16 @@ const puzzleInput = [
   120320
 ];
 
+// apply calculate function to inital fuel input to get array with the seperate fuel numbers
 const solution = puzzleInput.map(element => calculate(element));
 
+// reduce function
 const reducer = (a, b) => a + b;
 
+// final solution that applies the reducer to the calculated fuel array
 console.log(solution.reduce(reducer));
 
+// calculate function for part 1
 function calculate(number) {
   let result = number / 3;
   result = Math.floor(result);
