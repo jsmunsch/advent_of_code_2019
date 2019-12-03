@@ -101,10 +101,15 @@ const puzzleInput = [
   120320
 ];
 
-function showNumber() {
-  puzzleInput.forEach(element => console.log(element));
+const solution = puzzleInput.map(element => calculate(element));
+
+const reducer = (a, b) => a + b;
+
+console.log(solution.reduce(reducer));
+
+function calculate(number) {
+  let result = number / 3;
+  result = Math.floor(result);
+  result -= 2;
+  return result;
 }
-
-const ShowSolution = document.querySelector("#button");
-
-ShowSolution.addEventListener("click", console.log("success"));
